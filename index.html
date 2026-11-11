@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#16121d">
+  <meta name="description" content="صفحة عربية بسيطة لتجربة تدرجات ألوان الغروب ونسخ CSS.">
+  <title>استوديو ألوان الغروب</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="studio">
+    <header class="intro">
+      <p class="eyebrow">مشروعك البرمجي الأول</p>
+      <h1>استوديو ألوان الغروب</h1>
+      <p class="lede">غيّر لونين وزاوية التدرّج، وشاهد النتيجة فورًا.</p>
+    </header>
+
+    <section class="preview-card" aria-label="معاينة التدرّج">
+      <div class="preview" id="preview">
+        <span class="preview-label">مساحة المعاينة</span>
+      </div>
+    </section>
+
+    <section class="controls" aria-labelledby="controls-title">
+      <h2 id="controls-title">عدّل الألوان</h2>
+      <div class="color-row">
+        <label class="color-control" for="color-one">
+          <span>اللون الأول</span>
+          <input id="color-one" type="color" value="#ff7a59">
+        </label>
+        <label class="color-control" for="color-two">
+          <span>اللون الثاني</span>
+          <input id="color-two" type="color" value="#7357d8">
+        </label>
+      </div>
+
+      <label class="angle-control" for="angle">
+        <span>زاوية التدرّج <output id="angle-value" for="angle">135°</output></span>
+        <input id="angle" type="range" min="0" max="360" value="135">
+      </label>
+
+      <div class="presets" aria-label="ألوان جاهزة">
+        <button class="preset" type="button" data-one="#ff7a59" data-two="#7357d8" data-angle="135">غروب هادئ</button>
+        <button class="preset" type="button" data-one="#f6b73c" data-two="#e85d75" data-angle="110">سماء ذهبية</button>
+        <button class="preset" type="button" data-one="#48c6ef" data-two="#6f86d6" data-angle="145">نسيم البحر</button>
+      </div>
+
+      <div class="code-box">
+        <code id="css-output" dir="ltr">background: linear-gradient(135deg, #ff7a59, #7357d8);</code>
+        <button id="copy-button" class="copy-button" type="button">انسخ CSS</button>
+      </div>
+      <p class="status" id="status" role="status" aria-live="polite"></p>
+    </section>
+
+    <footer>جرّب الألوان التي تحبها؛ لا يمكن أن تخطئ هنا.</footer>
+  </main>
+</body>
+</html>
